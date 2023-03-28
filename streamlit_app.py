@@ -23,7 +23,7 @@ streamlit.dataframe(fruits_to_show)
 
 #New section to display fruityvice api response
 streamlit.header("Fruityvice Fruit Advice!")
-fruit_choice = streamlit.text_input('What fruit would you like information about?','kiwi')
+fruit_choice = streamlit.dataframe('What fruit would you like information about?','kiwi')
 streamlit.write('The user entered ', fruit_choice)
 
 import requests
@@ -51,8 +51,5 @@ fruits_to_add = my_fruit_list.loc[add_fruits_selected]
 streamlit.dataframe(fruits_to_add)
 
 # Let's put a pick list here so they can pick the fruit they want to add
-add_fruits_selected2 = streamlit.selectbox("What fruit would you like to add:", list(my_fruit_list.index))
-fruits_to_add2 = my_fruit_list.loc[add_fruits_selected2]
-
-#display the table on the page
-streamlit.write('Thanks for adding:',fruits_to_add2.fruit)
+fruit_choice2 = streamlit.dataframe('What fruit would you like to add?','jackfruit')
+streamlit.write('The user entered ', fruit_choice2)
