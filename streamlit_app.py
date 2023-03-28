@@ -48,4 +48,4 @@ add_fruits_selected = streamlit.multiselect("What fruit would you like to add:",
 fruits_to_add = my_fruit_list.loc[fruits_selected]
 
 #display the table on the page
-streamlit.dataframe(fruits_to_add)
+streamlit.text("Thanks for adding:", fruits_to_add)
