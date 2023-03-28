@@ -49,7 +49,3 @@ fruits_to_add = my_fruit_list.loc[add_fruits_selected]
 
 #display the table on the page
 streamlit.dataframe(fruits_to_add)
-
-# Let's put a pick list here so they can pick the fruit they want to add
-fruit_choice2 = streamlit.dataframe('What fruit would you like to add?','jackfruit')
-streamlit.write('The user entered ', fruit_choice2)
