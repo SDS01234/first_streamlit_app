@@ -42,3 +42,8 @@ my_cur.execute("SELECT * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
+
+# All the end user to add a fruit to the list
+add_my_fruit = streamlit.selectbox("Pick a fruit:", list(my_fruit_list.index),['Avocado','Strawberries'])
+fruit_to_add = my_fruit_list.loc[add_my_fruit]
+streamlit.write('Thank you for adding ', fruit_to_add)
