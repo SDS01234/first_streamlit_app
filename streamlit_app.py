@@ -55,4 +55,4 @@ add_fruits_selected2 = streamlit.selectbox("What fruit would you like to add:", 
 fruits_to_add2 = my_fruit_list.loc[add_fruits_selected2]
 
 #display the table on the page
-streamlit.write('Thanks for adding:',fruits_to_add2)
+streamlit.write('Thanks for adding:',fruits_to_add2.index)
