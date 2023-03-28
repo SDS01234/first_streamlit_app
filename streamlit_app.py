@@ -51,7 +51,7 @@ fruits_to_add = my_fruit_list.loc[add_fruits_selected]
 streamlit.dataframe(fruits_to_add)
 
 # Let's put a pick list here so they can pick the fruit they want to add
-add_fruits_selected2 = streamlit.multiselect("What fruit would you like to add:", list(my_fruit_list.index))
+add_fruits_selected2 = streamlit.select("What fruit would you like to add:", list(my_fruit_list.index))
 fruits_to_add2 = my_fruit_list.loc[add_fruits_selected2]
 
 #display the table on the page
