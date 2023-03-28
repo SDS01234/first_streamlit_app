@@ -44,6 +44,6 @@ streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
 # All the end user to add a fruit to the list
-add_my_fruit = streamlit.selectbox("Pick a fruit:", list(my_fruit_list.index),['Avocado','Strawberries'])
+add_my_fruit = streamlit.text_input('What fruit would you like to add:', 'jackfruit')
 fruit_to_add = my_fruit_list.loc[add_my_fruit]
 streamlit.write('Thank you for adding ', fruit_to_add)
